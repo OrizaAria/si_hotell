@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,16 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+// Route::middleware([
+//     'auth:sanctum',
+//     config('jetstream.auth_session'),
+//     'verified',
+// ])->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('dashboard');
+//     })->name('dashboard');
+// });
+
+route::get('/', [AdminController::class, 'home']);
+route::get('/home', [AdminController::class, 'index'])->name('home');
+
+route::get('/create_kamar', [AdminController::class, 'create_kamar']);
+route::post('/tambah_kamar', [AdminController::class, 'tambah_kamar']);
+
+route::get('/data_kamar', [AdminController::class, 'data_kamar']);
+
+route::get('/kamar_update/{id}', [AdminController::class, 'kamar_update']);
+route::post('/edit_kamar/{id}', [AdminController::class, 'edit_kamar']);

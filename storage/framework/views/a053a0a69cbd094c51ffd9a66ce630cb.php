@@ -1,0 +1,9 @@
+<script src="<?php echo e(asset('admin/vendor/jquery/jquery.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/vendor/popper.js/umd/popper.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/vendor/bootstrap/js/bootstrap.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/vendor/jquery.cookie/jquery.cookie.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/vendor/chart.js/Chart.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/vendor/jquery-validation/jquery.validate.min.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/charts-home.js')); ?>"></script>
+<script src="<?php echo e(asset('admin/js/front.js')); ?>"></script>
+<?php /**PATH C:\xampp\htdocs\si_hotell\resources\views/admin/js.blade.php ENDPATH**/ ?>
