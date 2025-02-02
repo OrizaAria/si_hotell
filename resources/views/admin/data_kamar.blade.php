@@ -58,6 +58,7 @@
                                 <th scope="col">Type Kamar</th>
                                 <th scope="col">Gambar</th>
                                 <th scope="col">Update</th>
+                                <th scope="col">Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,6 +81,11 @@
                                     <td>
                                         <a class="btn btn-outline-warning"
                                             href="{{ url('kamar_update', $data->id) }}">Update</a>
+                                    </td>
+                                    <td><a onclick="return confirm('Apakah Anda Ingin Menghapus Kamar')"
+                                            class="btn btn-outline-danger"
+                                            href="{{ url('kamar_delete', $data->id) }}">Delete
+                                        </a>
                                     </td>
                                 </tr>
                         </tbody>

@@ -76,4 +76,11 @@ class AdminController extends Controller
         $data->save();
         return redirect('data_kamar')->with('success', 'Kamar Berhasil Di Update');
     }
+
+    public function kamar_delete($id)
+    {
+        $data = Room::find($id);
+        $data->delete();
+        return redirect()->back()->with('success', 'Room Berhasil Dihapus');
+    }
 }
